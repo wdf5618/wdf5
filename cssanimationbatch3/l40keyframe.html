@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Keyframe</title>
+	<style type="text/css">
+		
+		body{
+			padding: 0;
+			margin: 0;
+		}
+
+		div{
+			width: 150px;
+			height: 150px;
+			background: steelblue;
+
+			/*animation-name: myani;*/
+			/*animation-duration: 3s;*/
+			/*animation-fill-mode: forwards;*/
+
+			/*animation-iteration-count: 3;*/
+			/*animation-iteration-count: infinite;*/
+			
+			/*animation-timing-function: ease;*/
+			/*animation-timing-function: ease-in;*/
+			/*animation-timing-function: ease-out;*/
+			/*animation-timing-function: ease-in-out;*/
+			/*animation-timing-function: linear;*/
+
+			/*animation-direction: normal;*/
+			/*animation-direction: reverse;*/
+			/*animation-direction: alternate;*/
+			/*animation-direction: alternate-reverse;*/
+
+			/*Short hand */
+					/*name adur aitc atf adir */
+			animation: myani 3s infinite linear alternate;
+
+		}
+
+		@keyframes myani{
+
+			0%{
+				transform: translate(0px);
+			}
+
+			50%{
+				transform: translate(500px);
+			}
+
+			100%{
+				transform: translate(500px, 500px);
+			}
+		}
+
+	</style>
+</head>
+<body>
+
+	<div></div>
+
+</body>
+</html>

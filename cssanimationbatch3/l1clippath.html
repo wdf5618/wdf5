@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clip Path</title>
+    <style type="text/css">
+
+        .square{
+            width: 100px;
+            height: 100px;
+            background-color: steelblue;
+        }
+
+        .circle{
+            width: 100px;
+            height: 100px;
+            background: steelblue;
+            border-radius: 50%;
+        }
+
+        .triangle{
+            width: 0;
+            height: 0;
+            /* background: steelblue; */
+
+            border-left: 100px solid transparent;
+            border-right: 100px solid transparent;
+            border-bottom: 100px solid orange;
+        }
+/* 
+        circle = circle(shape-radius at position);
+        ellipse
+        polygon */
+
+        .squareshape{
+            width: 100px;
+            height: 100px;
+            background: steelblue;
+
+            float: left;
+
+            margin-right: 20px;
+        }
+
+        .circleshape{
+            width: 100px;
+            height: 100px;
+            background: steelblue;
+            /* border-radius: 50%; */
+
+            float: left;
+            
+            /* clip-path: circle(); */
+            clip-path: circle(50%);
+
+            shape-outside: circle();
+
+            margin-right: 20px;
+        }
+
+        .ellipseshape{
+            width: 100px;
+            height: 100px;
+            background: steelblue;
+
+            float: left;
+
+            /* ellipse(width height); */
+            clip-path: ellipse(50% 70%);
+
+            shape-outside: ellipse(50% 70%);
+
+            margin-right: 20px;
+        }
+
+        .polygonshape{
+            width: 100px;
+            height: 100px;
+            background: steelblue;
+
+            /* clip-path: polygon(50% 0%, 0% 100%, 100% 100%); */
+
+            /* clip-path: polygon(0 0, 100% 0, 100% 25%, 56% 26%, 55% 100%, 37% 100%, 38% 26%, 0 26%); */
+
+            clip-path: polygon(0 0, 33% 100%, 66% 100%, 99% 0, 80% 0, 51% 81%, 20% 0);
+
+            shape-outside: polygon(0 0, 33% 100%, 66% 100%, 99% 0, 80% 0, 51% 81%, 20% 0);
+
+            float: left;
+            
+            margin-right: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="square">Square</div>
+
+    <hr>
+
+    <div class="circle">Circle</div>
+
+    <hr/>
+
+    <div class="triangle">Triangle</div>
+
+    <hr>
+
+    <div>
+        <div class="squareshape">
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae odit magni obcaecati, vel incidunt natus accusamus perspiciatis corporis blanditiis voluptas dolore, corrupti, tempora consequuntur ducimus aspernatur Voluptates, ullam eveniet quisquam sapiente aliquid, nam est dicta, unde eligendi provident nesciunt? Ipsam, consequuntur adipisci quibusdam, omnis odit et saepe doloribus quos iste quae quas numquam facere. Reiciendis, exercitationem harum suscipit sit culpa sunt, possimus est neque tempore laudantium error maiores! Reiciendis eius molestiae consequatur alias repellendus, commodi voluptatum dolores, nam voluptate soluta animi impedit laudantium inventore maxime atque ab eveniet. Voluptatem accusamus, incidunt voluptate alias atque molestias amet totam consequatur odit eaque labore omnis officia numquam nemo porro doloremque cum odio ullam saepe quibusdam deleniti aspernatur? Odio, temporibus modi!</p>
+        
+        <div class="circleshape">
+            
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae odit magni obcaecati, vel incidunt natus accusamus perspiciatis corporis blanditiis voluptas dolore, corrupti, tempora consequuntur ducimus aspernatur Voluptates, ullam eveniet quisquam sapiente aliquid, nam est dicta, unde eligendi provident nesciunt? Ipsam, consequuntur adipisci quibusdam, omnis odit et saepe doloribus quos iste quae quas numquam facere. Reiciendis, exercitationem harum suscipit sit culpa sunt, possimus est neque tempore laudantium error maiores! Reiciendis eius molestiae consequatur alias repellendus, commodi voluptatum dolores, nam voluptate soluta animi impedit laudantium inventore maxime atque ab eveniet. Voluptatem accusamus, incidunt voluptate alias atque molestias amet totam consequatur odit eaque labore omnis officia numquam nemo porro doloremque cum odio ullam saepe quibusdam deleniti aspernatur? Odio, temporibus modi!</p>
+    </div>
+
+    <hr/>
+
+    <div>
+        <div class="ellipseshape">
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae odit magni obcaecati, vel incidunt natus accusamus perspiciatis corporis blanditiis voluptas dolore, corrupti, tempora consequuntur ducimus aspernatur Voluptates, ullam eveniet quisquam sapiente aliquid, nam est dicta, unde eligendi provident nesciunt? Ipsam, consequuntur adipisci quibusdam, omnis odit et saepe doloribus quos iste quae quas numquam facere. Reiciendis, exercitationem harum suscipit sit culpa sunt, possimus est neque tempore laudantium error maiores! Reiciendis eius molestiae consequatur alias repellendus, commodi voluptatum dolores, nam voluptate soluta animi impedit laudantium inventore maxime atque ab eveniet. Voluptatem accusamus, incidunt voluptate alias atque molestias amet totam consequatur odit eaque labore omnis officia numquam nemo porro doloremque cum odio ullam saepe quibusdam deleniti aspernatur? Odio, temporibus modi!</p>
+        
+        <div class="polygonshape">
+            
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae odit magni obcaecati, vel incidunt natus accusamus perspiciatis corporis blanditiis voluptas dolore, corrupti, tempora consequuntur ducimus aspernatur Voluptates, ullam eveniet quisquam sapiente aliquid, nam est dicta, unde eligendi provident nesciunt? Ipsam, consequuntur adipisci quibusdam, omnis odit et saepe doloribus quos iste quae quas numquam facere. Reiciendis, exercitationem harum suscipit sit culpa sunt, possimus est neque tempore laudantium error maiores! Reiciendis eius molestiae consequatur alias repellendus, commodi voluptatum dolores, nam voluptate soluta animi impedit laudantium inventore maxime atque ab eveniet. Voluptatem accusamus, incidunt voluptate alias atque molestias amet totam consequatur odit eaque labore omnis officia numquam nemo porro doloremque cum odio ullam saepe quibusdam deleniti aspernatur? Odio, temporibus modi!</p>
+    </div>
+
+    
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hover Effect</title>
+	<style type="text/css">
+		
+		body{
+			height: 100vh;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.btn{
+			font-size: 22px;
+			background-color: steelblue;
+			border: none;
+			color: #fff;
+			text-transform: uppercase;
+			padding: 12px 40px;
+			cursor: pointer;
+
+			position: relative;
+		}
+
+		.btn::before{
+			content: '';
+			width: 25px;
+			height: 25px;
+			background-color: none;
+
+			border-top: 2px solid steelblue;
+			border-left: 2px solid steelblue;
+
+			position: absolute;
+			top: -5px;
+			left: -5px;
+
+			transition: all 0.3s;
+		}
+
+		.btn::after{
+			content: '';
+			width: 25px;
+			height: 25px;
+			background-color: transparent;
+
+			border-right: 2px solid steelblue;
+			border-bottom: 2px solid steelblue;
+
+			position: absolute;
+			bottom: -5px;
+			right: -5px;
+
+			transition: all 0.3s;
+		}
+
+		.btn:hover::before{
+			left: calc(100% - 22px);
+			/*left: calc(100% - 25px + 5px);*/
+
+			border-left: none;
+			border-right: 2px solid steelblue;
+		}
+
+		.btn:hover::after{
+			/*right: calc(100% - 22px);*/
+			right: calc(100% - 25px + 5px);
+
+			border-right: none;
+			border-left: 2px solid steelblue;
+		}
+
+
+	</style>
+</head>
+<body>
+
+	<button type="button" class="btn">Hover Me</button>
+
+</body>
+</html>
+
+<!-- ATT CODE 26CC  -->

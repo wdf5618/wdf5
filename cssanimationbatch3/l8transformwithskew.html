@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Transform with Skew</title>
+    <style type="text/css">
+        
+        .container{
+            width: 1000px;
+            background: grey;
+        }
+
+        .container .square{
+            width: 150px;
+            height: 60px;
+            background: red;
+            color: #fff;
+            font-size: 20px;
+            padding: 10px 0;
+            margin: 20px 0;
+
+            text-align: center;
+            line-height: 60px;
+
+            transition: all 0.5s;
+        }
+
+        #skew:hover{
+            /* skew(xy); only one value */
+
+            /* transform: skew(45deg); */
+            /* transform: skew(-45deg); */
+            transform: skew(50deg);
+        }
+
+        #skewxy:hover{
+            /* skew(x-angle, y-angle) */
+
+            /* transform: skew(40deg, 20deg); */
+            /* transform: skew(-40deg, 20deg); */
+            transform: skew(70deg, 45deg);
+        }
+
+        #skewx:hover{
+            /* skewX(x-angle); same result only one value  */
+
+            /* transform: skewX(45deg); */
+            transform: skewX(-45deg);
+        }
+
+        #skewy:hover{
+            /* skewX(x-angle); same result only one value  */
+
+            /* transform: skewY(45deg); */
+            transform: skewY(-45deg);
+        }
+
+        img{
+            width: 300px;
+            
+            display: block;
+            margin: auto;
+
+            transition: transform 0.5s;
+        }
+
+        img:hover{
+            /* transform: skew(60deg); */
+            transform: skew(20deg, 10deg);
+            /* transform: skewX(60deg); */
+            /* transform: skewY(60deg); */
+        }
+    
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div id="skew" class="square">Skew</div>
+    </div>
+    <div class="container">
+        <div id="skewxy" class="square">Skew XY</div>
+    </div>
+    <div class="container">
+        <div id="skewx" class="square">Skew X</div>
+    </div>
+    <div class="container">
+        <div id="skewy" class="square">Skew Y</div>
+    </div>
+
+    <hr/>
+
+    <div>
+        <img src="./img/dog.jpg" alt="dog" />
+    </div>
+</body>
+</html>

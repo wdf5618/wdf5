@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Button Hover Effect</title>
+	<style type="text/css">
+		body{
+			font-family: sans-serif;
+			height: 100vh;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.btn{
+			width: 200px;
+			height: 60px;
+
+			background: linear-gradient(
+				60deg,
+				blue,
+				skyblue,
+				blue,
+				skyblue
+			);
+
+			background-size: 300%;
+
+			color: #fff;
+
+			font-size: 20px;
+			border-radius: 50px;
+			border: none;
+			box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+			cursor: pointer;
+
+			transition: background-position .5s ease-in-out;
+		}
+
+		.btn:hover{
+			/*background-position: left; default*/
+			background-position: right;
+		}
+
+		.btn:active{
+			box-shadow: 0 1px 15px rgba(0,0,0,0.4);
+			transform: translateY();
+		}
+	</style>
+</head>
+<body>
+	
+	<button type="button" class="btn">Hover Me</button>
+
+</body>
+</html>
