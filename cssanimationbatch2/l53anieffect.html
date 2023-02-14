@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ani Effect</title>
+	<style type="text/css">
+		body{
+			font-family: sans-serif;
+			height: 100vh;
+
+			background-image: url('./img/banner.png');
+								/*left top*/
+								/*x 	y*/
+			background-position: 0 0;
+
+			/*animation-name: myani;
+			animation-duration: 15s;
+			animation-iteration-count: infinite;
+			animation-timing-function: linear;*/
+
+			animation: myani 15s infinite linear;
+		}
+
+		@keyframes myani{
+			from{
+				background-position: 0 0;
+			}
+
+			to{
+				/*background-position: 0 600px;*/
+				background-position: 800px 0;
+			}
+		}
+	</style>
+</head>
+<body>
+
+	<div class="banner"></div>
+
+</body>
+</html>

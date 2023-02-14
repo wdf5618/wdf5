@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>Card Effect</title>
+</head>
+<style type="text/css">
+	body{
+		height: 100vh;
+		font-family: sans-serif;
+		background: #111;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		overflow: hidden;
+
+	}
+
+	.container{
+		width: 500px;
+		height: 500px;
+		border-radius: 10px;
+		overflow: hidden;
+		position: relative;
+
+	}
+
+	img{
+		width: 100%;
+	}
+
+	.container::before{
+		content: '';
+		width: 100%;
+		height: 100%;
+		background: tomato;
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0.4;
+		transform: translateY(100%);
+		transition: all 0.25s;
+		transition-delay: 0.25s;
+
+	}
+
+	.container:hover::before{
+		transform: translateY(0%);
+		transition-delay: 0s;
+	}
+	.cap{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		transform: translateY(-10%);
+		opacity: 0;
+		transition: all 0.25s;	
+
+	}
+	.cap h1,.cap p{
+		margin: 0;
+		letter-spacing: 1px;
+		color: #fff;
+	}
+
+	.cap h1{
+		font-size: 30px;
+		text-transform: uppercase;
+		margin-bottom: 5px;
+	}
+	.cap p{
+		text-transform: capitalize;
+		background: #ff7200;
+	}
+
+	.container:hover .cap{
+		transform: translateY(0%);
+		opacity: 1;transition-delay: 0.3s;
+	}
+</style>
+<body>
+<div class="container">
+	<img src="img/cat.jpg">
+	<div class="cap">
+		<h1>How Sweet !$</h1>
+		<p>This is css animations lession for image card</p>
+	</div>
+</div>
+</body>
+</html>
