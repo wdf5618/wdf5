@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+}
+
+/* Start Header */
+header{
+    height: 100vh;
+    background-image: linear-gradient(
+        rgba(0,0,0,0.3),
+        rgba(0,0,0,0.3)
+    ),url("../assets/img/etc/cover.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    position: relative;
+}
+
+/* Start Navbar */
+.navbar{
+    background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3));
+    padding:20px 30px;
+
+    transition: all 0.7s;
+}
+
+.navmenus{
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7));
+    padding: 5px 30px;
+}
+
+.menuitems{
+    color: #eee;
+    font-size: 12px;
+    letter-spacing: 1px;
+
+    transition: color 0.5s;
+}
+
+.menuitems:hover{
+    color: #1a99e8;
+}
+
+.lines1 ,.lines2 ,.lines3{
+    width: 23px;
+    height: 3px;
+    margin: 5px;
+
+    transition: all 0.4s;
+}
+
+.changes .lines1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+
+.changes .lines2{
+    opacity: 0;
+}
+
+.changes .lines3{
+    transform:  rotate(45deg) translate(-5px,-6px);
+}
+/* End Navbar */
+
+
+
+/* Start Banner */
+.banners{
+    width: 80%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%,-50%);
+}
+
+.bannerheaders{
+    animation-name: bnani;
+    animation-duration: 2s;
+}
+
+
+.bannerparagraphs{
+    animation-name: bnani;
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+
+    animation-fill-mode: backwards;
+}
+
+@keyframes bnani{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(0%);
+        opacity: 1;
+    }
+}
+/* End Banner */
+
+/* End Header */
+
+/* Start Mission Section */
+.missions{
+    background-color: hsl(203, 57%, 5%);
+}
+
+.underlines{
+    width: 150px;
+    border: 3px solid #eee;
+    margin: auto;
+}
+
+.cameraimgs.fromlefts{
+    animation-name: myanifromleft;
+    animation-duration: 3s;
+}
+
+.missiontexts.fromrights{
+    animation-name: myanifromright;
+    animation-duration: 3s;
+}
+
+@keyframes myanifromleft {
+    0%{
+        transform: translateX(-120px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    
+}
+
+@keyframes myanifromright {
+    0%{
+        transform: translate(30px);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(0);
+        opacity: 1;
+    }
+    
+}
+
+
+/* End Mission Section */
+
+/* Start Collection Section */
+
+.cardshadows{
+    box-shadow: 5px 8px 20px #444
+    ;
+}
+
+.card{
+    position: relative;
+}
+
+.headings{
+    width: 70%;
+    background-color: #222;
+    font-size: 14px;
+
+    letter-spacing: 1px;
+    cursor: pointer;
+
+    position: absolute;
+    top: 70%;
+    right: 0;
+    opacity: 0.7;
+
+    transition: all 0.5s;
+}
+
+.headings:hover{
+    opacity: 1;
+}
+
+
+/* End Collection Section */
+
+
+/* Start Gallart Section */
+.darkunderlines{
+    width: 150px;
+    border: 3px solid #aaa;
+    margin: auto;
+}
+
+.gallerylists{
+    color: #777;
+    cursor: pointer;
+}
+
+.gallerylists.activeitems{
+    color:#078de0
+}
+/* End Gallart Section */
+
+
+/* Start Customers Section */
+.customers{
+        background-color: #17111f;
+}
+/* End Customers section */
+
+
+/* Start Pricing Section */
+.cardones,.cardtwos,.cardthrees{
+    background-image:linear-gradient(
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.5)
+        ),url('../assets/img/etc/camerabg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+
+    box-shadow: 7px 18px 50px #555;
+}
+
+.carditems{
+    width: 55%;
+    border-bottom: 1px solid #fff;
+    margin: auto;
+}
+
+.cardbuttons{
+    width: 130px;
+    background-color: tomato;
+    border-radius: 25px;
+    box-shadow: 5px 8px 20px #000;
+    
+    transition: all 0.3s;
+
+
+}
+.cardbuttons:hover{
+    background-color: rgb(224, 151, 14);
+    transform: translateY(-2px);
+}
+
+.cardones.movefromlefts{
+    animation: movefromlefts;
+    animation-duration: 2s;
+}
+
+.cardtwos.movefrombottoms{
+    animation: movefrombottoms;
+    animation-duration: 2s;
+}
+
+.cardthrees.movefromrights{
+    animation: movefromrights;
+    animation-duration: 2s;
+}
+
+@keyframes movefromlefts {
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    
+}
+
+@keyframes movefrombottoms {
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+}
+
+@keyframes movefromrights {
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    
+}
+/* End Pricng Section */
+
+
+/* Start Contact Section */
+.contacts{
+    background-image: linear-gradient(
+            105deg,
+            rgba(0,0,0,1) 0%,
+            rgba(0,0,0,0.9) 50%,
+            transparent 50%
+
+    ) ,url('./../assets/img/etc/lady.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.inputs{
+    background: transparent;
+    border-color: transparent;
+    border-bottom: 2px solid #ccc;
+    /* color:#fff; */
+
+    /* bez of rounded = bootstrap style */
+    border-radius: 0;
+    
+}
+
+.inputs:focus{
+    background: transparent;
+    border-color: transparent;
+    border-bottom: 2px solid #de4121;
+    color: #fff;
+
+    /* bez of form-control = bootstrap style */
+    box-shadow: none;
+}
+
+.submitbuttons{
+    background-color:#de4121;
+    color: #fff;
+
+    transition: all 0.3s;
+}
+
+.submitbuttons:hover{
+    background-color: #eb5a3d;
+    transform:translateY(-3px);
+}
+
+.labels{
+    display: block;
+    font-size: 15px;
+    color: #999;
+    margin-left: 4px;
+    margin-top: -60px;
+
+    transition: all 0.3s;
+}
+
+.inputs:placeholder-shown + .labels{
+    /* remove both display & value  */
+    /* opacity: 0; */
+
+    /* remove display  */
+    visibility: hidden;
+    transform: translate(20px,20px);
+
+}
+/* End Contact Section */
+
+/* Start Footer Section  */
+.footerlinks{
+    font-size: 13px;
+    color: #fff;
+    text-decoration: none;
+
+}
+
+.footerlinks:hover{
+    color: #1575eb;
+}
+/* End Footer Section  */
